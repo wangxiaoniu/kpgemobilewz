@@ -1,0 +1,396 @@
+/* ::::: http://mo.faisys.com/css/base.min.css?v=201601061032 ::::: */
+
+@font-face {
+	font-family: "icomoon";
+	font-style: normal;
+	font-weight: normal;
+	src: url('icomoon.eot') format("embedded-opentype"), url('icomoon.woff') format("woff"), url('icomoon.ttf') format("truetype");
+}
+[class^="icon-"], [class*=" icon-"], [class*="faisco-icons-"] {
+	font-family: "icomoon",微软雅黑,"microsoft yahei",宋体,新宋体; 
+	font-style: normal; font-weight: normal; font-variant: normal; 
+	text-transform: none; line-height: 1; }
+* { margin: 0px; }
+html { height: 100%; }
+a { color: rgb(0, 0, 0); padding: 0px; text-decoration: none; cursor: pointer; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; }
+img { border: 0px none; max-width: 100%; max-height: 100%; vertical-align: top; }
+.icon-gClose::before { content: ""; display: table-cell; vertical-align: middle; }
+#g_body { overflow-x: hidden; overflow-y: auto; color: rgb(0, 0, 0); font-size: 0.7rem; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; height: 100%; }
+.g_web { margin: 0px auto; max-width: 640px; left: 0px; top: 0px; overflow-x: hidden; width: 100%; min-height: 100%; }
+.webLeft, .webRight { display: none; }
+@media only screen and (min-width: 640px) {
+	.webLeft, .webRight { position: fixed; display: block; width: calc(50% - 8rem); height: 100%; top: 0px; z-index: 999; background: rgb(40, 40, 40) none repeat scroll 0% 0%; }
+	.webLeft { left: 0px; }
+	.webRight { right: 0px; }
+}
+.webContainerBox { z-index: 0; display: block; position: relative; top: 2.4rem; bottom: 0px; left: 0px; right: 0px; margin: 0px auto; }
+.webTop { margin: 0px auto; position: fixed; top: 0px; z-index: 90; width: 100%; max-width: 640px; height: 0px; transition: all 0.4s ease 0s; }
+.webHeader { max-width: 640px; width: 100%; }
+.webHeaderBox { width: 100%; max-width: 640px; margin: 0px auto; transition: all 0.35s ease 0s; }
+.webHeaderBg { color: rgb(255, 255, 255); position: relative; }
+.headerSiteMaskWhiteBg { position: absolute; width: 100%; z-index: 49; background-color: white; display: none; }
+.headerSiteMaskBg { position: absolute; width: 100%; z-index: 50; display: none; }
+.header { text-align: center; position: relative; }
+.header .pageTitle { height: 2.4rem; font-weight: normal; font-size: 1rem; line-height: 2.4rem; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 76.5612%; display: inline-block; color: rgb(255, 255, 255); vertical-align: top; padding-right: 0.25rem; padding-left: 0.25rem; clear: both; position: relative; z-index: 80; }
+.header .pageLogo { display: inline-block; height: 100%; width: 2.25rem; vertical-align: top; margin: 0.25rem; position: relative; z-index: 99; }
+.header .pageLogo .logoImg { height: 100%; width: 100%; background-size: cover; background-repeat: no-repeat; background-position: center center; box-sizing: border-box; }
+.webTopBox { margin: auto; }
+.g_web .loading { z-index: 9999; position: fixed; width: 100%; max-width: 640px; top: 0px; bottom: 0px; left: 0px; right: 0px; margin: 0px auto; background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0% ! important; }
+.g_web .loading .splashscreen { position: absolute; transform: translateX(-50%) translateY(-50%); top: 50%; left: 50%; display: block; }
+.loading .ui-loader { opacity: 0.85; }
+.loading .ui-loader .ui-icon { position: static; display: block; opacity: 0.9; width: 3rem; height: 3rem; background-color: transparent; }
+.spin { transform: rotate(360deg); animation: 1s ease 0s normal none infinite running spin; }
+.loading .ui-icon-loading { background-image: url('loading.png'); border-radius: 1rem; background-size: 3rem 3rem; }
+.swipe { overflow: hidden; visibility: hidden; position: relative; margin: 0px auto; }
+.swipe img { width: 100%; }
+.hiddenDefaultBanner .defaultBanner { background: transparent none repeat scroll 0px center; }
+.swipe .bannerImageDiv { background-repeat: no-repeat; height: 100%; background-position: 50% 50%; }
+.swipe .customBanner { background-size: contain; }
+.bannerSwipeContainer { overflow: hidden; position: relative; height: 100%; background-size: contain; transform-style: preserve-3d; }
+.bannerSwipeContainer img { display: inline-block; width: 100%; height: 100%; font-size: 0px; line-height: 0; vertical-align: middle; background-size: 100% auto; background-position: 50% 50%; background-repeat: no-repeat; }
+.bannerSwipeContainer > div { float: left; width: 100%; position: relative; height: 100%; }
+.webBannerBox .bannerBullet { position: absolute; height: 0.9rem; bottom: 0px; width: 100%; }
+.webBannerBox .bannerBullet .bullets { text-align: center; list-style: outside none none; margin: 0px; padding: 0px; }
+.webBannerBox .bullets li { display: inline-block; width: 0.35rem; height: 0.35rem; border-radius: 100%; margin: 0px 0.1rem; cursor: pointer; background: rgba(170, 170, 170, 0.5) none repeat scroll 0% 0%; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); vertical-align: middle; }
+.webBannerBox .bullets li.on { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.nextAndPreviousIcon { width: 1.75rem; height: 1.75rem; float: right; top: 35%; cursor: pointer; position: absolute; background-position: 0.25rem center; border-radius: 4px; }
+.imageSliderNext { background: rgba(0, 0, 0, 0.4) url('picright.png') no-repeat scroll 0% 0% / 100% auto; right: 0.75rem; }
+.imageSliderPrevious { background: rgba(0, 0, 0, 0.4) url('picleft.png') no-repeat scroll 0% 0% / 100% auto; left: 0.75rem; }
+.webFooter { margin: 0px auto; }
+.webFooterBox { margin: 0px auto; }
+.webFooterBox .bottomdiv { height: 1.75rem; }
+.webFooterBox .bottomdiv .bottom { position: relative; background: rgb(153, 153, 153) none repeat scroll 0% 0%; height: 1.5rem; }
+.webFooterBox .bottomdiv .bottom .backtop { width: 2rem; float: right; color: rgb(255, 255, 255); position: relative; text-transform: capitalize; text-align: right; padding-right: 1rem; line-height: 1.5rem; transition: all 350ms ease 0s; font-family: verdana; font-weight: bold; cursor: pointer; }
+.webFooterBox .bottomdiv .bottom .backtop:active { background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%; }
+.webFooterBox .bottomdiv .bottom .backtop b { position: absolute; width: 0px; height: 0px; top: 0.5rem; right: 0.35rem; border-width: 0.2rem; border-style: solid; border-color: transparent transparent rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.form .formBannerMore .icon-titleMore::before { position: absolute; top: 50%; margin-top: -0.5rem; left: 0.05rem; }
+.icon-mSearchIcon::before { content: ""; font-size: 1.4rem; position: absolute; top: 50%; transform: translateY(-50%); }
+.icon-mSearchBtn::before { content: ""; font-size: 1.4rem; position: absolute; top: 50%; left: 0px; width: 100%; transform: translateY(-50%); }
+.searchType0 .icon-mSearchIcon::before { content: none; }
+.searchType1 .icon-mSearchBtn::before { content: "搜索"; color: rgb(255, 255, 255); font-size: 0.7rem; height: 0.9rem; }
+.searchType2 .icon-mSearchBtn::before { content: "GO"; color: rgb(255, 255, 255); font-size: 0.7rem; }
+.searchType2 .icon-mSearchBtn::after { content: ""; position: absolute; top: 0.5rem; left: -0.4rem; width: 0px; height: 0px; border-right-width: 0.4rem; border-right-style: solid; border-right-color: inherit; border-top: 0.4rem solid transparent; border-bottom: 0.4rem solid transparent; }
+.searchType3 .icon-mSearchIcon::before { content: none; }
+.searchType4 .icon-mSearchIcon::before { content: none; }
+.searchType5 .icon-mSearchIcon::before { content: none; }
+.icon-closeSearch::before { content: ""; font-size: 1.75rem; color: rgb(169, 170, 172); position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%); }
+.icon-offSearch::before { content: ""; font-size: 1.75rem; color: rgb(169, 170, 172); position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%); }
+.icon-popupSearchIcon::before { content: ""; text-align: center; font-size: 1.4rem; position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%); }
+.icon-popupSearchBtn::before { content: ""; font-size: 1.4rem; width: 100%; position: absolute; top: 50%; left: 0px; transform: translateY(-50%); }
+.popupSearchWrap1 .icon-popupSearchBtn::before { content: "搜索"; font-size: 0.7rem; color: rgb(255, 255, 255); }
+.popupSearchWrap2 .icon-popupSearchBtn::after { content: ""; position: absolute; top: 0.48rem; left: -0.4rem; width: 0px; height: 0px; border-right-width: 0.4rem; border-right-style: solid; border-right-color: inherit; border-top: 0.4rem solid transparent; border-bottom: 0.4rem solid transparent; }
+.popupSearchWrap2 .icon-popupSearchBtn::before { content: "GO"; font-size: 0.7rem; color: rgb(255, 255, 255); }
+.form { position: relative; margin-top: 0.6rem; overflow: hidden; }
+.form:nth-child(1) { margin-top: 0px; box-shadow: none; }
+.form .formBannerTitle { width: 100%; font-weight: 500; font-size: 0.8rem; line-height: 1.75rem; }
+.formBannerTitle { width: 100%; }
+.formMiddle { width: 100%; }
+.form .formBannerTitle .titleText { text-indent: 0.4rem; width: 78%; white-space: nowrap; overflow: hidden; float: left; color: rgb(255, 255, 255); }
+.formBannerTitle .titleTextIcon { display: none; float: left; line-height: inherit; }
+.form .formBannerTitle .textContent { white-space: nowrap; float: left; overflow: hidden; text-overflow: ellipsis; width: 90%; }
+.newsList .line::before { content: ""; }
+.newsList .line.wWLineOne::before { content: ""; background: transparent none repeat scroll 0px center; box-shadow: none; border: 0px none; }
+.newsList .line.wWLineOne:nth-last-child(2)::before { content: ""; background: transparent none repeat scroll 0px center; box-shadow: none; border: 0px none; }
+.newsList .line.wWLineOne::after { content: ""; border: 0px none; background: transparent none repeat scroll 0px center; }
+.newsList .line.wWLineOne:nth-last-child(2)::after { content: ""; background: transparent none repeat scroll 0px center; border: 0px none; }
+.newsList .line.One::before { content: ""; background: transparent none repeat scroll 0px center; box-shadow: none; border: 0px none; }
+.newsList .line.One:nth-last-child(2)::before { content: ""; background: transparent none repeat scroll 0px center; box-shadow: none; border: 0px none; }
+.newsList .line.One::after { content: ""; border: 0px none; background: transparent none repeat scroll 0px center; }
+.newsList .line.One:nth-last-child(2)::after { content: ""; border: 0px none; background: transparent none repeat scroll 0px center; }
+.newsList .mixNewsStyleLine .icon-noFigureB::before { content: ""; background-color: rgb(242, 242, 242); display: inline-block; font-size: 6.5rem; position: relative; top: 0px; left: 50%; margin: 0px 0px 0px -3.2rem; color: rgb(196, 196, 196); opacity: 1; }
+.newsList .newsLine .icon-noFigureS::before { content: ""; display: inline-block; font-size: 40px; position: relative; top: 4px; left: 4px; margin: 0px; color: rgb(196, 196, 196); opacity: 1; }
+.newsList .newsLine .icon-noFigureM::before { content: ""; background-color: rgb(242, 242, 242); display: inline-block; font-size: 3.4rem; position: relative; top: 0px; left: 0px; margin: 0px; color: rgb(196, 196, 196); opacity: 1; }
+.webBannerBox { margin: 0px auto; position: relative; }
+.navbar .navLeft { display: none; }
+.navbar .navRight { display: none; }
+.icon-navLeft::before { font-size: 1.5rem; position: absolute; margin-left: -0.4rem; margin-top: 0rem ! important; top: 50%; transform: translateY(-50%); }
+.icon-navRight::before { font-size: 1.5rem; position: absolute; margin-left: -0.3rem; margin-top: 0rem ! important; top: 50%; transform: translateY(-50%); }
+.navbar { text-align: center; left: 0px; right: 0px; height: 2.5rem; overflow: hidden; margin: 0px auto; position: absolute; }
+.navExistOffPanel { display: none; position: fixed; margin-left: 0px; bottom: 0px; top: 0px; height: 100%; width: 100%; max-width: 640px; z-index: 1; transition: all 300ms ease 0s; }
+.navbar .itemSep { display: none; }
+.navbar .itemSep:first-child { display: none; }
+.navbar .itemSelected { background-color: rgb(42, 41, 41); }
+.navButton .navButtonPanel { display: none; z-index: 99 ! important; }
+.navBaseIcon .icon-navItemIcon::before { content: ""; font-size: 1.1rem; color: rgb(255, 255, 255); }
+.navItem_3 .icon-navItemIcon::before { content: ""; }
+.navItem_6 .icon-navItemIcon::before { content: ""; }
+.navItem_7 .icon-navItemIcon::before { content: ""; }
+.navItem_9 .icon-navItemIcon::before { content: ""; }
+.navItem_10 .icon-navItemIcon::before { content: ""; }
+.navItem_11 .icon-navItemIcon::before { content: ""; }
+.navItem_12 .icon-navItemIcon::before { content: ""; }
+.navItem_101 .icon-navItemIcon::before { content: ""; }
+.navItem_102 .icon-navItemIcon::before { content: ""; }
+.navItem_103 .icon-navItemIcon::before { content: ""; }
+.faisco-icons-contact1::before { content: ""; }
+.faisco-icons-edit1::before { content: ""; }
+.faisco-icons-cart1::before { content: ""; }
+.navButton .menuNav .icon-menuNavTip::before { content: ""; font-size: 2.7rem; color: rgb(255, 255, 255); display: block; position: relative; z-index: 3; }
+.navbar .navItem a { overflow: hidden; font-size: 0.75rem; text-decoration: none; text-align: center; display: block; position: relative; padding: 0px 0.5rem; word-break: keep-all; white-space: nowrap; width: auto; min-width: 3rem; max-width: none; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; box-sizing: border-box; }
+.pagenation .icon-pageNext::before { content: ""; font-size: 1.2rem; display: inline-block; margin-left: 0.2rem; padding: 0px; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 3.5rem; }
+.pagenation .icon-pagePrev::before { content: ""; font-size: 1.2rem; display: inline-block; margin-right: 0.2rem; padding: 0px; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 3.5rem; }
+.pagenation .icon-pageNext:active::before { color: rgb(255, 255, 255); }
+.pagenation .icon-pagePrev:active::before { color: rgb(255, 255, 255); }
+.richContent { line-height: 1.6; padding: 0px 0.35rem; white-space: normal; word-wrap: break-word; word-break: normal; overflow: hidden; text-align: left; margin: 0.5rem 0px; font-size: 0.8rem; }
+.productDetailInfoPanel img, .richContent img { max-height: none; }
+.richContent a, .content a { text-decoration: underline; }
+.clear { clear: both; }
+.footer { padding: 0.5rem 0px; position: relative; }
+.technical { margin-bottom: 1rem; }
+.technicalSupport { clear: both; text-align: center; color: rgb(102, 102, 102); margin: 0px; padding: 0.1rem 0px; position: relative; overflow: hidden; font-size: 0.6rem; }
+.footer a { text-decoration: none; }
+.technicalSupport a { color: rgb(102, 102, 102); text-decoration: underline; }
+.PcVer { margin-left: 0.5rem; }
+.webModuleContainer { position: relative; }
+.formMiddle { overflow: hidden; padding-bottom: 0.25rem; table-layout: fixed; border-spacing: 0px; }
+.formMiddle .middleLeft, .formMiddle .middleRight { display: none; }
+.webCustomerServiceBox { margin: 0px auto 2.4rem; }
+.webCustomerServiceBox .customerServiceDiv { width: 100%; max-width: 640px; }
+.webCustomerServiceBox .service { height: 2.4rem; line-height: 2.4rem; float: left; text-align: center; }
+.webCustomerServiceBox a { color: rgb(255, 255, 255); }
+.customerServiceDiv .customServiceLine { display: none; }
+.customerServiceDiv .icon { height: 1.5rem; margin: auto; font-size: 3.6rem; color: rgb(255, 255, 255); }
+.faisco-icons-mail1::before { content: ""; }
+.faisco-icons-qq1::before { content: ""; }
+.faisco-icons-call1::before { content: ""; }
+.faisco-icons-gps1::before { content: ""; }
+.faisco-icons-message1::before { content: ""; }
+.customerServiceDiv .describe { color: rgb(255, 255, 255); 
+line-height: 4.8rem; font-size: 1.2rem; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.msgTop .icon-update::before { top: 0.7rem; }
+.icon-mnameIcon::before, .icon-memailIcon::before, .icon-mphoneIcon::before, .icon-mmsgIcon::before, .icon-mpswIcon::before { position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; color: rgb(51, 51, 51); }
+.icon-mmsgIcon::before { top: 0.6rem; }
+.icon-mpswIcon::before { content: ""; }
+.icon-mnameIcon::before { content: ""; }
+.icon-memailIcon::before { content: ""; }
+.icon-mphoneIcon::before { content: ""; }
+.icon-mmsgIcon::before { content: ""; }
+.icon-userMsgIcon::before { content: ""; padding-right: 0.2rem; font-size: 1rem; vertical-align: top; z-index: 2; }
+.icon-publishIcon::before { content: ""; padding-right: 0.2rem; font-size: 0.9rem; vertical-align: top; }
+.icon-update::before { content: ""; font-size: 1.2rem; font-weight: bold; position: absolute; top: 1.3rem; right: 0.2rem; color: rgb(102, 102, 102); z-index: 2; }
+.multilingualArea .g_mullink span::before { font-size: 0.9rem; vertical-align: top; }
+.g_background { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.photoModule.styleForm7 { position: relative; margin: 0.5rem auto; overflow: hidden; width: 100%; }
+.imageMiddleSpan { display: inline-block; height: 100%; vertical-align: middle; }
+.photoModule .photoModuleImageSwipeContainer { overflow: hidden; position: relative; }
+.icon-nameIcon::before, .icon-userIcon::before { content: ""; position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; }
+.icon-pswIcon::before { content: ""; position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; }
+.icon-phoneIcon::before { content: ""; position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; }
+.icon-emailIcon::before { content: ""; position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; }
+.icon-msgIcon::before { content: ""; position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; }
+.icon-checkIcon::before { content: ""; display: inline-block; margin-right: 0.2rem; font-size: 0.7rem; position: relative; top: 0.1rem; }
+.icon-uncheckIcon::before { content: ""; display: inline-block; margin-right: 0.2rem; font-size: 0.7rem; position: relative; top: 0.1rem; }
+.profileContent li .clickIcon .icon-clickIcon::before { content: ""; font-size: 0.9rem; }
+.icon-noLoginIcon::before { content: ""; font-size: 4.5rem; color: rgb(153, 153, 153); }
+#profile .profileContent .icon-pInfoIcon::before, #profile .profileContent .icon-cPswIcon::before, #profile .profileContent .icon-orderIcon::before, #profile .profileContent .icon-addrInfoIcon::before, #profile .profileContent .icon-starIcon::before, #profile .profileContent .icon-integralIcon::before, #profile .profileContent .icon-noticeIcon::before { display: inline-block; width: 2.3rem; text-align: center; font-size: 0.9rem; position: relative; top: 0.15rem; z-index: 2; }
+#profile .profileContent .icon-pInfoIcon::before { content: ""; color: rgb(150, 196, 254); }
+#profile .profileContent .icon-cPswIcon::before { content: ""; color: rgb(231, 155, 198); }
+#profile .profileContent .icon-orderIcon::before { content: ""; color: rgb(255, 214, 112); }
+#profile .profileContent .icon-addrInfoIcon::before { content: ""; color: rgb(255, 142, 124); }
+#profile .profileContent .icon-starIcon::before { content: ""; color: rgb(227, 177, 112); }
+#profile .profileContent .icon-integralIcon::before { content: ""; color: rgb(255, 227, 23); }
+#profile .profileContent .icon-noticeIcon::before { content: ""; color: rgb(194, 178, 234); }
+.siteFormItem input::-moz-placeholder { color: rgb(140, 140, 140); }
+.icon-errorTigs::before { content: ""; font-size: 2rem; }
+.icon-succeedTigs::before { content: ""; font-size: 2rem; }
+.mobiPrompt .icon-mobiPromptClose::before { content: ""; font-size: 1.2rem; color: rgb(153, 153, 153); }
+.mobiPrompt .icon-PromptCancel::before { content: ""; }
+.mobiPrompt .icon-PromptSave::before { content: ""; }
+.g_locale2052 .mobiPrompt .icon-PromptCancel::before { content: "取消"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; }
+.g_locale2052 .mobiPrompt .icon-PromptSave::before { content: "确认收货"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; }
+.g_locale2052 .mobiPrompt .deleteOrder.icon-PromptSave::before { content: "确定"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; }
+.productWaterFall:nth-child(2n+1) { margin-left: 0.5rem; height: auto; }
+.productWaterFall:nth-child(2n) { right: 0.5rem; height: auto; }
+.productCrossedSlide:nth-child(2n+1) { float: left; margin-left: 0.5rem; }
+.productCrossedSlide:nth-child(2n) { float: right; margin-right: 0.5rem; }
+@media only screen and (min-width: 480px) {
+	.defaultBanner, .swipe .systemtBanner { background-size: 100% auto; background-repeat: no-repeat; }
+}
+.icon-noProduct::before { content: ""; font-size: 4.5rem; color: rgb(102, 102, 102); }
+.icon-plusIcon::before { content: ""; color: rgb(102, 102, 102); font-size: 0.8rem; }
+.icon-minisIcon::before { content: ""; color: rgb(102, 102, 102); font-size: 0.8rem; }
+.icon-delIcon::before { content: ""; color: rgb(102, 102, 102); font-size: 0.75rem; }
+.icon-shopping::before { content: ""; font-size: 1rem; vertical-align: middle; }
+.icon-rightIcon::before { content: ""; font-size: 1rem; }
+.orderSettle .ship_line .selectship .icon-rightIcon::before { position: relative; top: 0.2rem; color: rgb(204, 204, 204); margin-right: -0.2rem; }
+.orderSettle .pay_line .icon-rightIcon::before { position: relative; top: 0.2rem; color: rgb(204, 204, 204); margin-right: -0.2rem; }
+.icon-addrSelect::before { content: ""; color: rgb(102, 102, 102); font-size: 1rem; float: right; position: relative; top: 2.25rem; right: 0.85rem; }
+.orderDetail .orderDetailTop .icon-SucceedIcon::before { content: ""; font-size: 2.5rem; font-weight: bold; }
+.orderDetail .orderDetail_line .line_item:nth-last-child(1) { border-bottom: 1px solid rgb(255, 255, 255) ! important; }
+.orderDetail .orderDetail_line .seeMore .icon-seemoreIcon::before { content: ""; font-size: 0.7rem; font-weight: bold; margin-left: 0.2rem; position: relative; top: 0.1rem; }
+.orderDetail .orderDetail_line .seeMore .icon-hidemoreIcon::before { content: ""; font-size: 0.7rem; margin-left: 0.2rem; font-weight: bold; position: relative; top: 0.1rem; }
+.icon-upIcon::before { content: ""; font-size: 0.75rem; }
+.opened .icon-upIcon::before { content: ""; font-size: 0.75rem; }
+.flowDetailPanel .icon-more::before { content: ""; font-size: 1.2rem; }
+.flowDetailPanel .icon-less::before { content: ""; font-size: 1.2rem; }
+.flowDetail .flowDetail_line .orderProductList .line_item:nth-last-child(1) { border-bottom: 1px solid rgb(255, 255, 255); }
+.flowInfo::after { content: ""; width: 0.06rem; height: 100%; background: rgb(221, 221, 221) none repeat scroll 0% 0%; position: absolute; display: block; left: 0px; top: 1rem; }
+.flowFlag::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: rgb(221, 221, 221) none repeat scroll 0% 0%; position: relative; display: block; transform: translate(-50%, -50%); top: 50%; left: 50%; }
+.flowInfo .icon-flowCurrent::before { content: ""; position: absolute; margin-top: 0.3rem; }
+.flowInfo:nth-child(1) { color: rgb(255, 98, 57); }
+.flowInfo:nth-last-child(1)::after { display: none; }
+.flowInfo:nth-child(1) .flowFlag { background: rgba(255, 98, 57, 0.4) none repeat scroll 0% 0%; }
+.flowInfo:nth-child(1) .flowFlag::before { background: rgb(255, 98, 57) none repeat scroll 0% 0%; }
+.icon-mallEdit::before { content: ""; line-height: 1.4rem; font-size: 1rem; position: relative; top: 0.15rem; }
+.icon-homeIcon::before { content: ""; display: table-cell; vertical-align: middle; }
+.postArea .icon-update::before { top: 0.7rem; }
+.fullScreenDivCotainer { position: fixed; z-index: 99; padding: 0px ! important; overflow: visible; }
+.mobiVideoOnline { height: 13rem; z-index: 0; }
+.mobiVideoOnlineIframe { width: 100%; height: 100%; }
+.productNewDetail .icon-collection::before { content: ""; color: rgb(153, 153, 153); font-size: 1.3rem; }
+.productNewDetail .icon-collectSelect::before { content: ""; color: rgb(235, 186, 53); font-size: 1.3rem; }
+.icon-shopCartIcon::before { content: ""; margin-left: 0.2rem; position: relative; top: 0.1rem; }
+.icon-Off::before { content: ""; font-size: 0.7rem; }
+.icon-share::before { content: ""; font-size: 1.2rem; }
+.icon-decrease::before { content: ""; color: rgb(102, 102, 102); font-size: 1rem; }
+.icon-increase::before { content: ""; color: rgb(102, 102, 102); font-size: 1rem; }
+.icon-defaultColor::before { color: rgb(60, 65, 74); }
+@media screen and (min-width: 800px) {
+}
+.productDetailHeader .proBack::before { color: rgb(60, 65, 74); }
+.productDetailHeader .icon-gClose::before { padding-left: 0px; font-size: 1.4rem; color: rgb(51, 51, 51); }
+.productDetailHeader .icon-noProduct::before { padding-left: 0px; font-size: 1.2rem; color: rgb(51, 51, 51); }
+.g_iconMiddle::before { padding: 0px; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
+.icon-gOther::before { content: ""; display: table-cell; vertical-align: middle; font-size: 1.2rem; color: rgb(51, 51, 51); }
+.icon-gGoforward::before { content: ""; font-size: 1rem; left: 1.6rem; }
+.userCommentPanel .userCommentHead .icon-gHome::before { color: rgb(78, 78, 78); }
+.icon-gHome::before { content: ""; display: table-cell; vertical-align: middle; font-size: 1.2rem; }
+.userCommentInfo .icon-update::before { top: 0.7rem; }
+.userCommentGoBack.icon-gClose::before { color: rgb(78, 78, 78); font-size: 1.4rem; }
+.shareListPanel a:nth-child(1) { margin-left: 0.7rem; }
+.shareListPanel a:nth-child(5) { margin-left: 0.7rem; }
+.icon-sina_weibo::before { content: ""; background-color: rgb(233, 37, 41); border-radius: 100%; }
+.icon-qq_weibo::before { content: ""; background-color: rgb(5, 144, 206); border-radius: 100%; }
+.icon-qq_zone::before { content: ""; background-color: rgb(10, 151, 247); border-radius: 100%; }
+.icon-kaixin001::before { content: ""; background-color: rgb(255, 150, 0); border-radius: 100%; }
+.icon-renren::before { content: ""; background-color: rgb(74, 118, 192); border-radius: 100%; }
+.icon-douban::before { content: ""; background-color: rgb(45, 153, 24); border-radius: 100%; }
+.icon-sohu_weibo::before { content: ""; background-color: rgb(253, 209, 0); border-radius: 100%; }
+.icon-netease_weibo::before { content: ""; background-color: red; border-radius: 100%; }
+.icon-baidu_hi::before { content: ""; background-color: rgb(63, 63, 216); border-radius: 100%; }
+.icon-baidu_tieba::before { content: ""; background-color: rgb(30, 132, 225); border-radius: 100%; }
+.icon-taojianghu::before { content: ""; background-color: rgb(255, 90, 0); border-radius: 100%; }
+.icon-FaceBook::before { content: ""; background-color: rgb(59, 88, 156); border-radius: 100%; }
+.icon-Twitter::before { content: ""; background-color: rgb(26, 178, 232); border-radius: 100%; }
+.icon-LinkedIn::before { content: ""; background-color: rgb(0, 106, 154); border-radius: 100%; }
+.g_locale2052 .icon-sina_weibo-text::after { content: "新浪微博"; }
+.g_locale2052 .icon-qq_weibo-text::after { content: "腾讯微博"; }
+.g_locale2052 .icon-qq_zone-text::after { content: "QQ空间"; }
+.g_locale2052 .icon-renren-text::after { content: "人人网"; }
+.g_locale2052 .icon-douban-text::after { content: "豆瓣网"; }
+.g_locale2052 .icon-kaixin001-text::after { content: "开心网"; }
+.g_locale2052 .icon-sohu_weibo-text::after { content: "搜狐网"; }
+.g_locale2052 .icon-netease_weibo-text::after { content: "网易微博"; }
+.g_locale2052 .icon-baidu_hi-text::after { content: "百度HI"; }
+.g_locale2052 .icon-baidu_tieba-text::after { content: "百度贴吧"; }
+.g_locale2052 .icon-taojianghu-text::after { content: "淘江湖"; }
+.g_locale2052 .icon-FaceBook-text::after { content: "脸书"; }
+.g_locale2052 .icon-Twitter-text::after { content: "推特"; }
+.g_locale2052 .icon-LinkedIn-text::after { content: "领英"; }
+.g_locale2052 .shareText::after { font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; }
+.icon-views::before { content: ""; font-size: 0.75rem; position: relative; top: 0.1rem; }
+.icon-group::before { content: ""; font-size: 1.42rem; top: 0.1rem; color: rgb(199, 199, 199); }
+.icon-postComm::before { content: ""; }
+.icon-nUserMsgIcon::before { content: ""; padding-right: 0.2rem; font-size: 1rem; z-index: 2; position: relative; top: 0.2rem; }
+.icon-noFigure::before { content: ""; display: inline-block; font-size: 6rem; position: relative; top: 50%; left: 50%; margin: -3rem 0px 0px -3rem; color: rgb(255, 255, 255); opacity: 0.5; }
+.photoGroupStyle2:nth-child(1) { margin-top: 0px; }
+.photoGroupStyle2:nth-child(2) { margin-top: 0px; }
+.photoGroupStyle2:nth-child(2n+2) { margin-left: 2%; }
+.photoGroupStyle1:nth-child(1) { margin-top: 0px; }
+div.icon-uiDetailTitle::before { content: ""; font-size: 1rem; position: relative; left: 0.4rem; bottom: 0.15rem; }
+div.icon-toolbar-base-detail::before { content: ""; font-size: 1rem; top: -2px; position: relative; }
+div.icon-toolbar-close-style::before { content: ""; font-size: 2rem; }
+.pagenation .icon-pagePrev.icon-cnNewsP::before { content: "上一篇"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; line-height: 1.3rem; margin-right: 0px; }
+.pagenation .icon-pageNext.icon-cnNewsN::before { content: "下一篇"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; line-height: 1.3rem; margin-left: 0px; }
+.pagenation .icon-pagePrev.icon-cnListP::before { content: "上一页"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; line-height: 1.3rem; margin-right: 0px; }
+.pagenation .icon-pageNext.icon-cnListN::before { content: "下一页"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; line-height: 1.3rem; margin-left: 0px; }
+.g_locale2052 .icon-userIcon::before, .g_locale2052 .icon-pswIcon::before, .g_locale2052 .icon-emailIcon::before, .g_locale2052 .icon-phoneIcon::before, .g_locale2052 .icon-msgIcon::before, .g_locale2052 .icon-nameIcon::before, .g_locale2052 .icon-customIcon::before, .g_locale2052 .icon-codeIcon::before, .g_locale2052 .icon-npwdIcon::before, .g_locale2052 .customIcon { font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; position: absolute; top: 0.85rem; left: 0.75rem; color: rgb(51, 51, 51); z-index: 3; display: inline-block; max-width: 2.8rem; height: 1rem; overflow: hidden; white-space: nowrap ! important; }
+.g_locale2052 .icon-userIcon::before { content: "帐号"; }
+.g_locale2052 .icon-pswIcon::before { content: "密码"; }
+.g_locale2052 .icon-emailIcon::before { content: "邮箱"; }
+.g_locale2052 .icon-phoneIcon::before { content: "电话"; }
+.g_locale2052 .icon-msgIcon::before { content: "留言"; }
+.g_locale2052 .icon-nameIcon::before { content: "姓名"; }
+.g_locale2052 .icon-codeIcon::before { content: "密保码"; }
+.g_locale2052 .icon-npwdIcon::before { content: "新密码"; }
+.g_locale2052 .icon-customIcon::before { display: none; }
+.icon-lockstarIcon::before { content: ""; vertical-align: middle; font-size: 7rem; text-align: center; margin-top: 1.5rem; display: inline-block; margin-left: 1rem; color: rgb(202, 202, 202); }
+.icon-customIcon::before { content: ""; position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; }
+.g_locale2052 .modifyProfile .icon-cnNewPsw::before { content: "新密码"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; position: absolute; top: 0.9rem; left: 0.75rem; color: rgb(51, 51, 51); z-index: 3; }
+.g_locale2052 .modifyProfile .icon-cnOldPsw::before { content: "旧密码"; font-family: "微软雅黑",Helvetica,"黑体",Arial,Tahoma; font-size: 0.7rem; position: absolute; top: 0.9rem; left: 0.75rem; color: rgb(51, 51, 51); z-index: 3; }
+#addrInfoList .addrInfo .left .selected::before { font-family: "icomoon",微软雅黑,"microsoft yahei",宋体,新宋体; content: ""; color: rgb(208, 2, 2); font-size: 2.2rem; }
+#addrInfoList .addrInfo .right .edit::before { font-family: "icomoon",微软雅黑,"microsoft yahei",宋体,新宋体; content: ""; color: rgb(102, 102, 102); font-size: 1.6rem; }
+#addrInfoList .addrInfo .opera .delete::before { content: ""; color: rgb(102, 102, 102); font-size: 1rem; }
+#addrInfoList .addrInfo .opera .edit::before { content: ""; color: rgb(102, 102, 102); font-size: 1rem; }
+.sysSearch .searchBackBtn::before { content: ""; font-size: 1.35rem; font-weight: bold; color: rgb(60, 65, 74); }
+/* ::::: http://mo.faisys.com/css/bannerAnimation.min.css?v=201511101951 ::::: */
+
+.swipe { perspective: 1600px; transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px); }
+/* ::::: http://mo.faisys.com/css/template/1005_4.min.css?v=201509212142 ::::: */
+
+.g_web { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.webContainerBox { background: rgb(255, 255, 255) none repeat scroll 0% 0%; top: 0rem; overflow: hidden; }
+.webHeader { box-shadow: none; }
+.webHeaderBg { background: rgb(255, 56, 17) none repeat scroll 0% 0% / contain ; }
+.header { height: 2.25rem; line-height: 2.25rem; text-align: center; margin: 0px; padding: 0px; }
+.webBannerBox { margin-bottom: 2rem; }
+.defaultBanner { background-image: url('170004.jpg'); background-position: 50% 50%; }
+.navbar { background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 1; height: 1.9rem; box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.2); }
+.navbar .navbarList { position: relative; left: 0rem; transition: left 0.5s ease-in 0s, color 0.3s ease-out 0s; }
+.navbar .navItem { float: left; }
+.navbar .navItem a { height: 1.9rem; line-height: 1.9rem; text-align: center; display: block; font-size: 0.75rem; padding: 0px 0.5rem; white-space: nowrap; max-width: none; color: rgb(51, 51, 51); text-decoration: none; overflow: hidden; width: auto; position: relative; word-break: keep-all; min-width: 3rem; }
+.navbar .navItem:active { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.navbar .navLeft { height: 100%; width: 0.75rem; position: absolute; background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%; z-index: 1; left: 0rem; top: 0rem; cursor: pointer; }
+.navbar .navRight { height: 100%; width: 0.75rem; position: absolute; background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%; z-index: 1; right: 0rem; top: 0rem; cursor: pointer; }
+.navbar .itemSelected { background: transparent none repeat scroll 0px center; height: 1.8rem; border-bottom: 0.4rem solid rgb(255, 56, 17); }
+.navButton { display: none; }
+.form { padding: 0rem; margin-top: 0rem; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.form .titleCenter { height: 2rem; line-height: 2rem; background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding: 0px; }
+.form .formBannerTitle .textContent { float: none; width: auto; padding-left: 0.4rem; padding-right: 0.4rem; display: inline-block; background-color: rgb(255, 255, 255); }
+.form .formBannerTitle .titleText { width: 96%; text-align: center; color: rgb(255, 56, 17); text-indent: 0px; margin-left: 0.3rem; border-bottom: 1px solid rgb(255, 56, 17); overflow: visible; height: 50%; }
+.form .formMiddle { background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding-bottom: 0rem; }
+.footer { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.webCustomerServiceBox .customerServiceDiv { padding-top: 0.15rem;
+ position: fixed; bottom: 0rem; height: 5.4rem; z-index: 1;
+ background: rgb(255, 56, 17) none repeat scroll 0% 0% / contain ; }
+.webFooterBox .bottomdiv .bottom { background: rgb(255, 56, 17) none repeat scroll 0% 0%; }
+.navBaseIcon .icon-navItemIcon::before { display: none; }
+.icon-navLeft::before { content: ""; color: rgb(255, 255, 255); display: block; font-size: 1rem; margin-left: -0.1rem; margin-top: 0.5rem; }
+.icon-navRight::before { content: ""; color: rgb(255, 255, 255); display: block; font-size: 1rem; margin-left: -0.1rem; margin-top: 0.5rem; }
+.productCrossedSlide:nth-child(2n+1) { margin-left: 0.6rem; }
+.productCrossedSlide:nth-child(2n) { margin-right: 0.6rem; }
+.productWaterFall:nth-child(2n+1) { margin-left: 0.65rem; }
+.productWaterFall:nth-child(2n) { right: 0.65rem; }
+.form .formBannerMore .icon-titleMore::before { content: ""; font-size: 1rem; width: 1rem; height: 1rem; color: rgb(102, 102, 102); line-height: 2rem; }
+.icon-gline::after { content: ""; font-size: 0.8rem; color: rgb(102, 102, 102); position: absolute; top: 0.6rem; right: 0.15rem; }
+.pagenation .icon-pagePrev::before { color: rgb(255, 56, 17); }
+.pagenation .icon-pageNext::before { color: rgb(255, 56, 17); }
+.pagenation .icon-pagePrev.pageDisable:active::before { color: rgb(255, 56, 17); }
+.pagenation .icon-pageNext.pageDisable:active::before { color: rgb(255, 56, 17); }
+.productNewDetailPanel .icon-pagePrev::before { color: rgb(255, 56, 17); }
+.productNewDetailPanel .icon-pageNext::before { color: rgb(255, 56, 17); }
+#module319 { opacity: 1; }
+#module317 { opacity: 1; }
+#module314 { opacity: 1; }
+#module314 { border: medium none; }
+#module314 { padding: 0px; }
+#module314 .formMiddle314 { border: medium none; }
+#module314 .formMiddle314 { padding: 0px; }
+#module314 .formBannerTitle314 { border: medium none; }
+#module314 .formBannerTitle314 { padding: 0px; }
+#module314 .formBannerTitle314 { display: none ! important; }
+#module316 { opacity: 1; }
+#module316 { border: medium none; }
+#module316 { padding: 0px; }
+#module316 .formMiddle316 { border: medium none; }
+#module316 .formMiddle316 { padding: 0px; }
+#module316 .formBannerTitle316 { border: medium none; }
+#module316 .formBannerTitle316 { padding: 0px; }
+#module316 .formBannerTitle316 { display: none ! important; }
+#module316 { background: transparent none repeat scroll 0% 0%; }
+#module316 .formMiddle316 { background: transparent none repeat scroll 0% 0%; }
+#module316 .g_background { background: transparent none repeat scroll 0% 0%; }
+#module316 .formMiddleContent316 { background: transparent none repeat scroll 0% 0%; }
+#module307 { opacity: 1; }
+#module318 { opacity: 1; }
+.open .navItem:nth-child(2) { transition-delay: 160ms; }
