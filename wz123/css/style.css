@@ -149,14 +149,14 @@ img { border: 0px none; max-width: 100%; max-height: 100%; vertical-align: top; 
 .webCustomerServiceBox .service { height: 2.4rem; line-height: 2.4rem; float: left; text-align: center; }
 .webCustomerServiceBox a { color: rgb(255, 255, 255); }
 .customerServiceDiv .customServiceLine { display: none; }
-.customerServiceDiv .icon { height: 1.5rem; margin: auto; font-size: 3.6rem; color: rgb(255, 255, 255); }
+.customerServiceDiv .icon { height: 1.5rem; margin: auto; font-size: 2.6rem; color: rgb(255, 255, 255); }
 .faisco-icons-mail1::before { content: ""; }
 .faisco-icons-qq1::before { content: ""; }
 .faisco-icons-call1::before { content: ""; }
 .faisco-icons-gps1::before { content: ""; }
 .faisco-icons-message1::before { content: ""; }
 .customerServiceDiv .describe { color: rgb(255, 255, 255); 
-line-height: 4.8rem; font-size: 1.2rem; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+line-height: 3.2rem; font-size: 0.8rem; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
 .msgTop .icon-update::before { top: 0.7rem; }
 .icon-mnameIcon::before, .icon-memailIcon::before, .icon-mphoneIcon::before, .icon-mmsgIcon::before, .icon-mpswIcon::before { position: absolute; top: 0.8rem; left: 0.6rem; font-size: 0.9rem; z-index: 2; color: rgb(51, 51, 51); }
 .icon-mmsgIcon::before { top: 0.6rem; }
@@ -351,7 +351,7 @@ div.icon-toolbar-close-style::before { content: ""; font-size: 2rem; }
 .form .formMiddle { background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding-bottom: 0rem; }
 .footer { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
 .webCustomerServiceBox .customerServiceDiv { padding-top: 0.15rem;
- position: fixed; bottom: 0rem; height: 5.4rem; z-index: 1;
+ position: fixed; bottom: 0rem; height: 3.8rem; z-index: 1;
  background: rgb(255, 56, 17) none repeat scroll 0% 0% / contain ; }
 .webFooterBox .bottomdiv .bottom { background: rgb(255, 56, 17) none repeat scroll 0% 0%; }
 .navBaseIcon .icon-navItemIcon::before { display: none; }
